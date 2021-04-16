@@ -1,0 +1,6 @@
+%Test for 2  nodes
+runpf('case2')
+
+deg = 22.375;
+rad =
+0.544 * cos(22.375*pi/180)
