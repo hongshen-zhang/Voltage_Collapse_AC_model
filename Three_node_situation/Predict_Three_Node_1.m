@@ -12,10 +12,10 @@ iter = 1000;
 mag_bound = 0;
 mpc = case3;
 Y = Form_YBUS(mpc);
-Y(index_load,index_gen) = 1/2;
-Y(index_gen,index_load) = 1/2;
-Y(index_load,index_load) = 1/2;
-Y(index_gen,index_gen) = 1/2;
+Y(index_load,index_gen) = 1;
+Y(index_gen,index_load) = 1;
+Y(index_load,index_load) = 1;
+Y(index_gen,index_gen) = 1;
 
 for loop = 1 : iter
     mag = loop / iter;

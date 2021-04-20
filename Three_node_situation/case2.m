@@ -39,7 +39,7 @@ mpc.gen = [
 %% branch data
 %	fbus	tbus	r	x	b	rateA	rateB	rateC	ratio	angle	status	angmin	angmax
 mpc.branch = [
-	1	2	2	0	0	0	0	0	0	0	1	-360	360;
+	1	2	1	0	0	0	0	0	0	0	1	-360	360;
 ];
 
 %%-----  OPF Data  -----%%
