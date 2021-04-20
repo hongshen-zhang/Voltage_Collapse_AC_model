@@ -18,6 +18,14 @@ Tried one simple results for three nodes. The difference comes from ignore the p
 
 ----
 
+For another three nodes
+
+![avatar](/figure_all/Another_three_node.png)
+
+Tried one results for three nodes. The difference comes from ignore the power of the middle node. Use the notion of equivalent resistence.
+
+----
+
 The detailed information about the paper can be viewed at 
 >Cite information : Gao J, Barzel B, Barabási A L. Universal resilience patterns in complex networks[J]. Nature, 2016, 530(7590): 307-312.
 
