@@ -10,7 +10,7 @@ Tried two simple results for two nodes. The predict results are same to the exac
 
 ----
 
-For Two nodes
+For Three nodes
 
 ![avatar](/figure_all/Three_node.png)
 
