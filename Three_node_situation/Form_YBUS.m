@@ -1,5 +1,4 @@
 function [YBUS] = Form_YBUS(mpc)
-mpc = case2;
 
 %Fit the data type of YBUS of the paper 
 [YBUS, ~, ~] = makeYbus(mpc);

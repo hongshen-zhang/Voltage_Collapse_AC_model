@@ -1,4 +1,4 @@
-function mpc = case3
+function mpc = case2
 %CASE9    Power flow data for 9 bus, 3 generator case.
 %   Please see CASEFORMAT for details on the case file format.
 %
@@ -27,8 +27,7 @@ mpc.baseMVA = 1;
 %	bus_i	type	Pd	Qd	Gs	Bs	area	Vm	Va	baseKV	zone	Vmax	Vmin
 mpc.bus = [
 	1	2	0	0	0	0	1	1	0	345	1	1.1	0.9;
-	2	1	0	0.1	0	0	1	1	0	345	1	1.5	0.5;
-    3	1	0.2071	0.2071	0	0	1	1	0	345	1	1.5	0.5;
+	2	1	0.01	0.01	0	0	1	1	0	345	1	1.5	0.5;
 ];
 
 %% generator data
@@ -40,8 +39,7 @@ mpc.gen = [
 %% branch data
 %	fbus	tbus	r	x	b	rateA	rateB	rateC	ratio	angle	status	angmin	angmax
 mpc.branch = [
-	1	2	1	0	0	0	0	0	0	0	1	-360	360;
-    2	3	1	0	0	0	0	0	0	0	1	-360	360;
+	1	2	2	0	0	0	0	0	0	0	1	-360	360;
 ];
 
 %%-----  OPF Data  -----%%

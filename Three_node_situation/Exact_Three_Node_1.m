@@ -1,10 +1,10 @@
-function [Mag_exact] = Exact_Three_Node
+function [Mag_exact] = Exact_Three_Node_1
 %This part calculate the exact magnitude for two node situation
 %Here the node 1 is the generator bus
 %Here the node 2 is the load bus
 %Here the node 3 is the load bus
 %Suppose the power of load bus is S_load = mag + mag * j
-%The result is 0.2071 for 4 significant digits
+
 
 index_load = 3;
 iter = 1000;
