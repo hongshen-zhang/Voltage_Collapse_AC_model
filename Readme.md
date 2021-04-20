@@ -26,8 +26,11 @@ Tried one results for three nodes. The difference comes from ignore the power of
 
 ----
 
-For one generator(Use equivalent resistence to eliminate other resistences except the target one.)
+For one generator and lots load (Use equivalent resistence to eliminate other resistences except the target one.)
 
+![avatar](/figure_all/One_gen.png)
+
+Tried one results for several nodes. The accuracy is about 15%.
 
 ----
 
