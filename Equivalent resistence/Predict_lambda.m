@@ -9,7 +9,7 @@ Up = 0;
 for loop = 1 : iter
     lambda = loop / iter * upper;
     mpc_mul = Multi_mpc(mpc,node,lambda);
-    Y_ii = Equivalent(index_gen,node,mpc_mul)
+    Y_ii = Equivalent(index_gen,node,mpc_mul);
     S_load = (-mpc_mul.bus(node,3) - mpc_mul.bus(node,4) * j) ...
         / mpc_mul.baseMVA;
     %This equation is for load bus
