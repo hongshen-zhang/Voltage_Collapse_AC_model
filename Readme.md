@@ -26,6 +26,11 @@ Tried one results for three nodes. The difference comes from ignore the power of
 
 ----
 
+For one generator(Use equivalent resistence to eliminate other resistences except the target one.)
+
+
+----
+
 The detailed information about the paper can be viewed at 
 >Cite information : Gao J, Barzel B, Barabási A L. Universal resilience patterns in complex networks[J]. Nature, 2016, 530(7590): 307-312.
 
