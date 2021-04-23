@@ -36,11 +36,11 @@ for loop = 2 : length(multi_lam)
     succ(loop) = results.success;
     delta(loop) = Delta;
     if (succ(loop - 1) == 1) && (succ(loop) == 0)
-        cri_succ = loop * 0.1;
+        cri_succ = lambda - 0.1;
     end
     
     if (delta(loop - 1) < 1) && (delta(loop) >= 1)
-        cri_delta = loop * 0.1;
+        cri_delta = lambda - 0.1;
     end
 end
 
