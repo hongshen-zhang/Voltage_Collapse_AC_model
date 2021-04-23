@@ -4,7 +4,7 @@
 
 Here is the bug picture part.
 
-![avatar](/bug_test.png)
+![avatar](bug_test.png)
 
 ## This part need further confirmation.
 
