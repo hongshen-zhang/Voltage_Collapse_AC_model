@@ -30,7 +30,7 @@ For one generator and lots load (Use equivalent resistence to eliminate other re
 
 ![avatar](/figure_all/One_gen.png)
 
-Tried one results for several nodes. The accuracy is about 15%.
+Here note that the all power of buses should be added to the one load bus (even for others)
 
 ----
 
