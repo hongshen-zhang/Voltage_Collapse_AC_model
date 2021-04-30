@@ -1,0 +1,7 @@
+function [mpc_final] = finetune_mpc(change_mpc)
+mpc_final = change_mpc;
+%mpc_final.branch(:,5) = 0;
+mpc_final.bus(:,10) = 0-;
+%mpc_final.gen(:,2) = 0;
+%mpc_final.gen(:,3) = 0;
+end

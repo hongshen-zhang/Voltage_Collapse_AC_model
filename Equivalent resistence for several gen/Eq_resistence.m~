@@ -8,8 +8,7 @@ n = length(mpc.bus(:,1));
 
 choose = 0;
 for loop = 1 : n
-    %if (loop ~= start) && (loop~= ter)
-    if (loop ~= ter)
+    if (loop ~= start) && (loop~= ter)
         choose = loop;
     end
 end
@@ -22,7 +21,6 @@ I_n(ter) = 1;
 Y(choose,:) = [];
 I_n(choose) = [];
 
-%if choose < ter
 if choose < ter
     ter = ter - 1;
 end
@@ -30,6 +28,6 @@ end
 
 U = inv(Y) * I_n;
 
-Y_ij =  1 / U(ter);
+Y_ij = 1 / U(ter);
 
 end

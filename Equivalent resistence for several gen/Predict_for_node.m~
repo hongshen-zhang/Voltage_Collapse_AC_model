@@ -5,8 +5,6 @@ function [success] = Predict_for_node(mpc,node)
 %Based on Eq_resistence
 Y_eq = [];
 del = [];
-sum_x = sum(mpc.bus(:,3)) - mpc.bus(node,3);
-sum_y = sum(mpc.bus(:,4)) - mpc.bus(node,4);
 del_num = 0;
 num_gen = length(mpc.gen(:,1));
 num_branch = length(mpc.branch(:,1));
@@ -35,12 +33,11 @@ for loop = 1 : num_gen
     del = [];
     del_num = 0;
     for loop_gen = 1 : num_gen
-        node_ind = mpc.gen(loop_gen,1);
-        [tf,~] = ismember(node_ind,new_gen);
+        node = mpc.gen(loop_gen,1);
+        [tf,~] = ismember(node,new_gen);
         if (tf == 1)
             del_num = del_num + 1;
             del(del_num) = loop_gen;
-            %change_mpc.gen(loop_gen,2) 
         end
     end
     change_mpc.gen(del,:) = [];
@@ -48,8 +45,8 @@ for loop = 1 : num_gen
     del = [];
     del_num = 0;
     for loop_bus = 1 : num_bus
-        node_ind = mpc.bus(loop_bus,1);
-        [tf,~] = ismember(node_ind,new_gen);
+        node = mpc.bus(loop_bus,1);
+        [tf,~] = ismember(node,new_gen);
         if (tf == 1)
             del_num = del_num + 1;
             del(del_num) = loop_bus;
@@ -80,13 +77,11 @@ for loop = 1 : num_gen
         change_mpc.branch(loop_ind,1) = new_index(ind_1);
         change_mpc.branch(loop_ind,2) = new_index(ind_2);
     end
-    mpc_final = finetune_mpc(change_mpc);
-    Y_eq(loop) = Eq_resistence(new_index(node),new_index(gen_list(loop)),mpc_final);
+    Y_eq(loop) = Eq_resistence(new_index(node),new_index(gen_list(loop)),change_mpc);
 end
 Y_ii = sum(Y_eq);
-S_load = (-(mpc.bus(node,3) + sum_x) - (mpc.bus(node,4) + sum_y) * j) ...
+S_load = (-mpc.bus(node,3) - mpc.bus(node,4) * j) ...
     / mpc.baseMVA;
-%S_load
 Pro_1 = sqrt(abs(Y_ii^2) ...
     / (abs(S_load) * abs(Y_ii) ...
     - real(S_load * Y_ii)));
@@ -96,6 +91,4 @@ if Pro_1 * Pro_2 > sqrt(2)
     success = 1;
 else
     success = 0;
-end
-
 end
