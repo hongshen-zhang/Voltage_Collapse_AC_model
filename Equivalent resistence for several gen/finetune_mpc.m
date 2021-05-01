@@ -1,5 +1,6 @@
 function [mpc_final] = finetune_mpc(change_mpc)
 mpc_final = change_mpc;
+%Let the total line charging susceptance to be 0
 mpc_final.branch(:,5) = 0;
 %baseKV
 %mpc_final.bus(:,10) = 0;

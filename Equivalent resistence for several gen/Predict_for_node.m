@@ -7,6 +7,9 @@ Y_eq = [];
 del = [];
 sum_x = sum(mpc.bus(:,3)) - mpc.bus(node,3);
 sum_y = sum(mpc.bus(:,4)) - mpc.bus(node,4);
+%Consider the impact of total line charging susceptance
+sum_sus = sum(mpc.branch(:,5)) / 2;
+
 del_num = 0;
 num_gen = length(mpc.gen(:,1));
 num_branch = length(mpc.branch(:,1));
@@ -83,14 +86,15 @@ for loop = 1 : num_gen
     mpc_final = finetune_mpc(change_mpc);
     Y_eq(loop) = Eq_resistence(new_index(node),new_index(gen_list(loop)),mpc_final);
 end
-Y_ii = sum(Y_eq);
+Y_ii = sum(Y_eq) + sum_sus * j;
+Y_ij = sum(Y_eq);
 S_load = (-(mpc.bus(node,3) + sum_x) - (mpc.bus(node,4) + sum_y) * j) ...
     / mpc.baseMVA;
 %S_load
 Pro_1 = sqrt(abs(Y_ii^2) ...
     / (abs(S_load) * abs(Y_ii) ...
     - real(S_load * Y_ii)));
-Pro_2 = abs(Y_ii * 1 ...
+Pro_2 = abs(Y_ij * 1 ...
     / Y_ii);
 if Pro_1 * Pro_2 > sqrt(2)
     success = 1;
