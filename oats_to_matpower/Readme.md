@@ -10,11 +10,11 @@ This is the MATPOWER style data of Reduced representative GB network in [1] and 
 runpf(case_GB)
 ```
 
-
 The raw_code folder transfer the data in OATS style of GB network into MATPOWER style. 
 
 ----
-See more details in ##[A reduced representative GB network](https://oats.readthedocs.io/en/latest/networkdata.html#a-reduced-representative-gb-network)
+See more details in [A reduced representative GB network](https://oats.readthedocs.io/en/latest/networkdata.html#a-reduced-representative-gb-network)
+It contains vivid picture with buses, branches and generators.
 
 >Cite information [1] : Bukhsh, Waqquas, Calum Edmunds, and Keith Bell. "OATS: Optimisation and Analysis Toolbox for Power Systems." IEEE Transactions on Power Systems 35.5 (2020): 3552-3561.
 >
