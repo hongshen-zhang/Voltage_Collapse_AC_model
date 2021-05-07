@@ -14,8 +14,7 @@ runpf(case_GB)
 The raw_code folder transfer the data in OATS style of GB network into MATPOWER style. 
 
 ----
-See more details in "A reduced representative GB network" part
-https://oats.readthedocs.io/en/latest/networkdata.<html id="a-reduced-representative-gb-network"></html>
+See more details in ##[A reduced representative GB network](https://oats.readthedocs.io/en/latest/networkdata.html#a-reduced-representative-gb-network)
 
 >Cite information [1] : Bukhsh, Waqquas, Calum Edmunds, and Keith Bell. "OATS: Optimisation and Analysis Toolbox for Power Systems." IEEE Transactions on Power Systems 35.5 (2020): 3552-3561.
 >
