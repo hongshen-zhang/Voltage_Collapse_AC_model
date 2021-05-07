@@ -1,8 +1,9 @@
 # A reduced representative GB network
 
+ ![language](https://img.shields.io/badge/language-Matlab-darkgreen.svg)
  ![Usage1](https://img.shields.io/badge/Usage-Matpower-green.svg)
  ![Usage2](https://img.shields.io/badge/Usage-OATs-blue.svg)
- ![language](https://img.shields.io/badge/language-Matlab-darkgreen.svg)
+
 ----
 This is the MATPOWER style data of Reduced representative GB network in [1] and [2].
 
