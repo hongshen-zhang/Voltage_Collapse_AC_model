@@ -12,7 +12,7 @@ The main result are 3 functions
 
 ## Function 1
 
-- Run `consider_onde_point(case30,10)` where `case30` indicates the mpc data and `10` is the load bus index.
+- Run `consider_ond_point(case30,10)` where `case30` indicates the mpc data and `10` is the load bus index.
 
 ![figure1](figure1.jpg)
 
