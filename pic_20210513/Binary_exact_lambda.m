@@ -4,7 +4,7 @@ function [result] = Binary_exact_lambda(mpc,node)
 %Use Binary_exact_lambda(case9,5) to start
 %__________________________________________________________________________
 
-iter = 20;
+iter = 50;
 upper = 1000;
 lower = 0;
 mpopt = mpoption;
