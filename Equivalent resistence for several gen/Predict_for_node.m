@@ -15,6 +15,10 @@ for loop = 1 : length(mpc.bus(:,1))
 end
 sum_x = sum_x - mpc.bus(node,3);
 sum_y = sum_y - mpc.bus(node,4);
+
+sum_x = 0;
+sum_y = 0;
+
 %Consider the impact of total line charging susceptance
 sum_sus = sum(mpc.branch(:,5)) / 2;
 
@@ -94,6 +98,7 @@ for loop = 1 : num_gen
     mpc_final = finetune_mpc(change_mpc);
     Y_eq(loop) = Eq_resistence(new_index(node),new_index(gen_list(loop)),mpc_final);
 end
+
 Y_ii = sum(Y_eq) + sum_sus * j;
 Y_ij = sum(Y_eq);
 S_load = (-(mpc.bus(node,3) + sum_x) - (mpc.bus(node,4) + sum_y) * j) ...
