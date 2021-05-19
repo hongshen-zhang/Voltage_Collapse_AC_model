@@ -16,7 +16,7 @@ line_delete = [11,12];
 ## Function 
 - Use `calculate_exact_Y(mpc)` to test the exact sum of Y in mpc.
 - Use `calculate_fast_Y(mpc)` to test the formula of sum of Y in mpc.
-- Use `calculate_delta_Y(mpc,line_delete)` to test the delta of Y after line deletion.
+- Use `calculate_delta_Y(mpc,line_delete)` to test the delta of sum of Y before and after line deletion.
 
 ----
 
