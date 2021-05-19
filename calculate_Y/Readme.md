@@ -28,4 +28,5 @@ line_delete = [11,12];
 | sum of Y' | 20.487 - 80.954i | 20.484 - 80.925i | 
 | delta between Y and Y' | 7.003 - 14.485i | 7.004 - 14.456i | 
 
+### More detailed of formula can be viewed at `Formula.pdf`
 
