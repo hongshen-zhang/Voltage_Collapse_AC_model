@@ -5,10 +5,7 @@ mpc.branch(:,5) = 0;
 mpc.branch(:,9) = 0;
 
 %gen_list
-gen_list = [];
-for loop = 1 : length(mpc.gen(:,1))
-    gen_list(loop) = mpc.gen(loop,1);
-end
+gen_list = mpc.gen(:,1);
 
 Y_exact = 0;
 for loop = 1 : length(mpc.bus(:,1))

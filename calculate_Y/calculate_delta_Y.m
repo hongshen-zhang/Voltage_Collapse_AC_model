@@ -17,11 +17,8 @@ for loop = 1 : n - m
 end
 
 R_result =  pinv(Y1) * (Y1 - Y2) * pinv(Y2) * I_n;
-
 left = inv(diag(diag(pinv(Y2) * I_n)));
-
 right = inv(diag(diag(pinv(Y1) * I_n)));
-
 delta = sum(diag(left * R_result * right));
 
 end
