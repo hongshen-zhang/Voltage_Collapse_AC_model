@@ -13,25 +13,19 @@ line_delete = [11,12];
 
 ----
 
-Function 
+## Function 
 - Use `calculate_exact_Y(mpc)` to test the exact sum of Y in mpc.
 - Use `calculate_fast_Y(mpc)` to test the formula of sum of Y in mpc.
 - Use `calculate_delta_Y(mpc,line_delete)` to test the delta of Y after line deletion.
 
 ----
 
-Simulation 1
+## Simulation result
 
-```
+| Name | Exact | Formula | 
+| :----: | :----: | :----: | 
+| sum of Y | 27.489 - 95.439i | 27.488 - 95.381i | 
+| sum of Y' | 20.487 - 80.954i | 20.484 - 80.925i | 
+| delta between Y and Y' | 7.003 - 14.485i | 7.004 - 14.456i | 
 
-The raw_code folder transfer the data in OATS style of GB network into MATPOWER style. 
-
-----
-See more details in [A reduced representative GB network](https://oats.readthedocs.io/en/latest/networkdata.html#a-reduced-representative-gb-network).
-
-It contains vivid picture with buses, branches and generators.
-
->Cite information [1] : Bukhsh, Waqquas, Calum Edmunds, and Keith Bell. "OATS: Optimisation and Analysis Toolbox for Power Systems." IEEE Transactions on Power Systems 35.5 (2020): 3552-3561.
->
->Cite information [2] : Bell, K. R. W. "Test system requirements for modelling future power systems." IEEE PES General Meeting. IEEE, 2010.
 
