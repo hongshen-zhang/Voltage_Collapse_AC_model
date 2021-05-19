@@ -4,11 +4,24 @@
  ![Usage1](https://img.shields.io/badge/Usage-Matpower-green.svg)
 
 ----
-This is the simulation part of formula that calculated \sum_i Y_i - Y_i'
-
+This example choose `IEEEcase14` and delete the branch with index `[11,12]`. Change the `main.m` to choose other case and line.
 
 ```
-runpf(case_GB)
+mpc = case14;
+line_delete = [11,12];
+```
+
+----
+
+Function 
+- Use `calculate_exact_Y(mpc)` to test the exact sum of Y in mpc.
+- Use `calculate_fast_Y(mpc)` to test the formula of sum of Y in mpc.
+- Use `calculate_delta_Y(mpc,line_delete)` to test the delta of Y after line deletion.
+
+----
+
+Simulation 1
+
 ```
 
 The raw_code folder transfer the data in OATS style of GB network into MATPOWER style. 
