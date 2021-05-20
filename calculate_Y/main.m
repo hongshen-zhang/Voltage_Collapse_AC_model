@@ -23,4 +23,6 @@ mpc = case14;
 warning('off')
 Simulation3 = 'Simulation for part 3 \sum_i (Y_i - Y_i'')'
 delta_exact = Y_exact - Y_exact_del
-Y_del_cal = calculate_delta_Y(mpc,line_delete) 
+Y_del_cal = calculate_delta_Y(mpc,line_delete)
+
+Y_del_cal = calculate_delta_new_Y(mpc,line_delete) 

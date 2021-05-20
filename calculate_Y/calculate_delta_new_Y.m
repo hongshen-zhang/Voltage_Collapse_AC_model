@@ -1,4 +1,4 @@
-function [delta] = calculate_delta_Y(mpc,line_set)
+function [delta] = calculate_delta_new_Y(mpc,line_set)
 %Initialization
 mpc.gen(:,6) = 1;
 mpc.branch(:,5) = 0;

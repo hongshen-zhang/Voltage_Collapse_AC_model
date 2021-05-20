@@ -23,7 +23,7 @@ for loop = 1 : n - m
     I_n(loop,loop) = 1;
 end
 
-R_result = diag(diag(pinv(Y) * I_n));
+R_result = diag(diag(pinv(Y,1e-5) * I_n));
 
 sum_Y = sum(sum(inv((R_result))));
 
